@@ -1,0 +1,607 @@
+{
+  "name": "Executive Business Intelligence Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "84c2783e-1086-4c01-b95e-646f00c6e70c",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U",
+          "mode": "list",
+          "cachedResultName": "Executive Business Intelligence Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sales_Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        -240
+      ],
+      "id": "0e76e598-a5a5-43a0-ae5a-df5a72a834bf",
+      "name": "Sales",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0ps8EHpt7X6qZq58",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U",
+          "mode": "list",
+          "cachedResultName": "Executive Business Intelligence Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 819846780,
+          "mode": "list",
+          "cachedResultName": "Marketing_Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit#gid=819846780"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        -80
+      ],
+      "id": "a8d02d4a-fadf-4fad-9024-5cff26baceb7",
+      "name": "Marketing",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0ps8EHpt7X6qZq58",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U",
+          "mode": "list",
+          "cachedResultName": "Executive Business Intelligence Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1185009929,
+          "mode": "list",
+          "cachedResultName": "Support_Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit#gid=1185009929"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        80
+      ],
+      "id": "ff7c94fc-ce37-4047-8afb-da13b1c303a3",
+      "name": "Support",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0ps8EHpt7X6qZq58",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U",
+          "mode": "list",
+          "cachedResultName": "Executive Business Intelligence Bot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1787986737,
+          "mode": "list",
+          "cachedResultName": "Finance_Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R_3wxoKAtB1hgdjx2DWuv99dvQmoOfiselHXDWSQu7U/edit#gid=1787986737"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        240
+      ],
+      "id": "7e44b966-5b34-4175-960c-434c90e81e23",
+      "name": "Finance",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0ps8EHpt7X6qZq58",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\nlet totalRevenue = 0;\nlet totalOrders = 0;\n\nfor (const item of rows) {\n  totalRevenue += Number(item.json.Revenue);\n  totalOrders += Number(item.json.Orders);\n}\n\nreturn [{\n  json: {\n    department: \"Sales\",\n    totalRevenue,\n    totalOrders,\n    avgOrderValue: totalRevenue / totalOrders\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        -240
+      ],
+      "id": "c8903603-369d-43d1-b1d5-8e263e630d74",
+      "name": "Sales KPI"
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\nlet totalSpend = 0;\nlet totalLeads = 0;\n\nfor (const item of rows) {\n  totalSpend += Number(item.json['Ad Spend']);\n  totalLeads += Number(item.json.Leads);\n}\n\nreturn [{\n  json: {\n    department: \"Marketing\",\n    totalSpend,\n    totalLeads,\n    costPerLead: totalSpend / totalLeads\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        -80
+      ],
+      "id": "e4fd0b1c-e690-4c7f-8696-b148c8e084a2",
+      "name": "Marketing KPI"
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\nlet totalTickets = 0;\nlet totalResolved = 0;\nlet totalResponseTime = 0;\n\nfor (const item of rows) {\n  totalTickets += Number(item.json.Tickets);\n  totalResolved += Number(item.json.Resolved);\n  totalResponseTime += Number(item.json['Average Response Time (Minutes)']);\n}\n\nreturn [{\n  json: {\n    department: \"Support\",\n    totalTickets,\n    resolutionRate: totalResolved / totalTickets,\n    avgResponseTime: totalResponseTime / rows.length\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        80
+      ],
+      "id": "cb9cd03d-3e90-43a3-ae78-c77721427bd0",
+      "name": "Support KPI"
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\nlet totalExpenses = 0;\nlet totalProfit = 0;\n\nfor (const item of rows) {\n  totalExpenses += Number(item.json.Expenses);\n  totalProfit += Number(item.json.Profit);\n}\n\nreturn [{\n  json: {\n    department: \"Finance\",\n    totalExpenses,\n    totalProfit,\n    profitMargin: totalProfit / (totalProfit + totalExpenses)\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        464,
+        240
+      ],
+      "id": "27519129-0165-44d7-adb4-32c215924913",
+      "name": "Finance KPI"
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        736,
+        -32
+      ],
+      "id": "27095c9b-5a59-4e72-aded-c12a622fa1de",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1-MINI"
+        },
+        "responses": {
+          "values": [
+            {
+              "content": "=You are a business analyst. \nSummarize the following KPI data for a CEO in a concise, executive style. \nHighlight trends, risks, and positives. Avoid technical jargon. \n\nKPI Data Array:\n{{ $json.KPIArray }}\n\nIf department is Sales:\nTotal Revenue: {{ $json.KPIArray[0].totalRevenue }}\nTotal Orders: {{ $json.KPIArray[0].totalOrders }}\nAverage Order Value: {{ $json.KPIArray[0].avgOrderValue }}\n\nIf department is Marketing\nTotal Ad Spend: {{ $json.KPIArray[1].totalSpend }}\nTotal Leads: {{ $json.KPIArray[1].totalLeads }}\nCost per Lead: {{ $json.KPIArray[1].costPerLead }}\n\nIf department is Support:\nTotal Tickets: {{ $json.KPIArray[2].totalTickets }}\nResolution Rate: {{ $json.KPIArray[2].resolutionRate }}\nAverage Response Time in Minutes: {{ $json.KPIArray[2].avgResponseTime }}\n\nIf department is Finance:\nTotal Expenses: {{ $json.KPIArray[3].totalExpenses }}\nTotal Profit: {{ $json.KPIArray[3].totalProfit }}\nProfit Margin: {{ $json.KPIArray[3].profitMargin }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.1,
+      "position": [
+        1120,
+        0
+      ],
+      "id": "81ad8961-209b-463e-9f49-5de23ec7ff9b",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "eOwF2Fr69DHrJA27",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Merge all items into one\nreturn [\n  {\n    json: {\n      KPIArray: $input.all().map(item => item.json)\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        928,
+        0
+      ],
+      "id": "7b4855a2-b99f-40e1-ab55-2df063433427",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0AEGAQ87PY",
+          "mode": "list",
+          "cachedResultName": "executive-reports"
+        },
+        "text": "=Daily Executive KPI Report: \n\n{{ $json.output[0].content[0].text }}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.4,
+      "position": [
+        1472,
+        -112
+      ],
+      "id": "0bba2ba3-3363-49e5-a465-b3b787b7b992",
+      "name": "Send a message",
+      "webhookId": "af857224-def2-4177-9a35-af20a167ef6e",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "Y0wrGLU8Zhw9Fcan",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "owenchristianvillano@gmail.com",
+        "subject": "Daily Executive KPI Report",
+        "emailType": "text",
+        "message": "=Hello, Here’s today’s executive KPI summary:  \n\n{{ $json.output[0].content[0].text }}\n\nBest regards, Your Automated BI Bot",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1472,
+        96
+      ],
+      "id": "03f553ba-be86-44ee-b291-e4edd2e97189",
+      "name": "Send a message1",
+      "webhookId": "deaaf442-644b-466b-b212-3a6612fb4caa",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "qxWJFmyL2TcJfzCP",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Schedule Trigger Node:\n- Triggers the workflow everyday at 7AM",
+        "height": 80,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "a45ec983-3079-4021-8d5b-90456155a51b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Google Sheets Node:\n- Gets the data from the respective sheets (Sales, Marketing, Support, and Finance)",
+        "height": 144,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        208,
+        -400
+      ],
+      "typeVersion": 1,
+      "id": "5b716d3e-8c4f-4ef3-9fa4-f597df7a605c",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "Function Nodes:\n- Calculates the KPIs for each branch (Sales, Marketing, Support, and Finance).",
+        "height": 144,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        416,
+        -400
+      ],
+      "typeVersion": 1,
+      "id": "5d837937-88f2-485a-a067-a294f6977958",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "Merge Node:\n- Merges all the outputs from the function nodes, and stores it.",
+        "height": 128,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        688,
+        -176
+      ],
+      "typeVersion": 1,
+      "id": "2e5f2f38-434b-4bcd-ac13-4ef93d012621",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "Function Node:\n- Stores all the data input into one array for easier processing.",
+        "height": 112,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        880,
+        128
+      ],
+      "typeVersion": 1,
+      "id": "b7b19240-bef2-4072-96c3-43229c42ff5f",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "OpenAI Node:\n- Analyzes all the KPIs\n- Outputs an Overall Assessment\n- Highlights Risks and Opportunities for business growth",
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1136,
+        -176
+      ],
+      "typeVersion": 1,
+      "id": "3ed8aa56-287f-4f64-bef6-03430faea044",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "Slack Node:\n- Sends OpenAI analysis to its respective channel",
+        "height": 96,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1424,
+        -224
+      ],
+      "typeVersion": 1,
+      "id": "5043f9b6-6ebd-46cb-b471-e2165d275607",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "Gmail Node:\n- Sends the result to a higher up for business decisions",
+        "height": 96,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1424,
+        256
+      ],
+      "typeVersion": 1,
+      "id": "8842fec1-bba9-48f4-980d-65a6ded1b71d",
+      "name": "Sticky Note7"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sales",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Marketing",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Support",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Finance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sales": {
+      "main": [
+        [
+          {
+            "node": "Sales KPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marketing": {
+      "main": [
+        [
+          {
+            "node": "Marketing KPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Support": {
+      "main": [
+        [
+          {
+            "node": "Support KPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finance": {
+      "main": [
+        [
+          {
+            "node": "Finance KPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sales KPI": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marketing KPI": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Support KPI": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Finance KPI": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "50140b65-550a-43a5-95c9-1a6ce35d178e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "51da36e14d282f96fa99554d3a706283144cf5354a057d2d1220bf8f99d36355"
+  },
+  "id": "X5SrbU-jinYmxicnHgS9o",
+  "tags": []
+}
